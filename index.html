@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid</title>
+    <link rel='stylesheet' href='./style.css' />
+
+</head>
+
+<body>
+    <div class="grid">
+
+        <div id="weatherGridItem" class="item">
+            <div id="weatherContent" class="item-content">
+                <div class="actualDay">
+
+                    <div class="temperature">
+                        <div class="degree-section">
+                            <h2 class="temperature-degree">36</h2>
+                            <span>°C</span>
+                        </div>
+                        <div class="temperature-description">Its cold</div>
+                        <div class="location-timezone">Timezone</div>
+                    </div>
+
+                    <div class="location">
+
+                        <canvas class="icon"></canvas>
+                    </div>
+
+
+                </div>
+
+                <div class="nextdays">
+                    <div id="forecastId">
+                        <canvas class="iconSmall0"></canvas>
+                        <div id="flexRow">
+                            <h2 class="nextDayOne">-42</h2>
+                            <span>°C</span>
+                        </div>
+                        <p>Morgen</p>
+                    </div>
+
+                    <div id="forecastId">
+                        <canvas class="iconSmall1"></canvas>
+                        <div id="flexRow">
+                            <h2 class="nextDayTwo">42</h2>
+                            <span>°C</span>
+                        </div>
+                        <p>Übermorgen</p>
+                    </div>
+
+                    <div id="forecastId">
+                        <canvas class="iconSmall2"></canvas>
+                        <div id="flexRow">
+                            <h2 class="nextDayThree">0</h2>
+                            <span>°C</span>
+                        </div>
+                        <p>Über-Übermorgen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="clubstatusItem" class="item">
+            <div id="clubstatusContent" class="item-content">
+                <div class="clubstatus">
+                    <h2>Clubstatus:</h2>
+                    <h1 class="status">unknown</h1>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="item-content">
+                <div id="clock"></div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-content">
+                <div> Twitter Feed - to be continued... </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="item-content">
+                <div> Entropia Kalender </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts for the Grid -->
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script>var grid = new Muuri('.grid', { dragEnabled: true }, {
+            layout: {
+                fillGaps: true,
+                horizontal: true,
+                alignRight: true,
+                alignBottom: true,
+                rounding: false
+            }
+        });</script>
+    <script src="clock.js"></script>
+    <!-- scripts for the weather app -->
+    <script src="skycons.js"></script>
+    <script src="app.js"></script>
+    <script src="clubstatusEntropia.js"></script>
+    </div>
+</body>
+
+</html>
